@@ -1,0 +1,53 @@
+{
+    "name": "shouldBeNotInvalidPassword",
+    "start": 1743452343426,
+    "stop": 1743452350679,
+    "stage": "finished",
+    "description": "Authorization with invalid password",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "52ab3d57-3c80-4550-b1bb-fd377f33c1b7",
+    "historyId": "7a0152030cd9efb865f03c0e6571880e",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationPageTest.shouldBeNotInvalidPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldBeNotInvalidPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(554)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

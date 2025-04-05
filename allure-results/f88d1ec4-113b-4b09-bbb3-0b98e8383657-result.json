@@ -1,0 +1,53 @@
+{
+    "name": "shouldBeNotEmptyPassword",
+    "start": 1743452362470,
+    "stop": 1743452367878,
+    "stage": "finished",
+    "description": "Authorization with empty password",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "f88d1ec4-113b-4b09-bbb3-0b98e8383657",
+    "historyId": "7f0eb0174916ccec0d3270f9241ccd34",
+    "fullName": "ru.iteco.fmhandroid.ui.AuthorizationPageTest.shouldBeNotEmptyPassword",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationPageTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "shouldBeNotEmptyPassword"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.AuthorizationPageTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(564)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

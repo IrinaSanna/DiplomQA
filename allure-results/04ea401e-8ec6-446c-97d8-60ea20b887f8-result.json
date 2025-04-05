@@ -1,0 +1,53 @@
+{
+    "name": "exitTheApplication",
+    "start": 1743452487455,
+    "stop": 1743452496162,
+    "stage": "finished",
+    "description": "Log out the application",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "04ea401e-8ec6-446c-97d8-60ea20b887f8",
+    "historyId": "df5a80392e8fca026ed1503a7c64d275",
+    "fullName": "ru.iteco.fmhandroid.ui.ExitTheApplicationTest.exitTheApplication",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.ExitTheApplicationTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "exitTheApplication"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.ExitTheApplicationTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(589)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}

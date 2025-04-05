@@ -1,0 +1,53 @@
+{
+    "name": "newsShouldNotBeCreatedWithoutACategory",
+    "start": 1743452621300,
+    "stop": 1743452637768,
+    "stage": "finished",
+    "description": "Creating news without a category",
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "ff595eeb-52fd-44d8-983d-a7827da06877",
+    "historyId": "6c13e238d0b3480aa364592600fbf1b0",
+    "fullName": "ru.iteco.fmhandroid.ui.NewsTest.newsShouldNotBeCreatedWithoutACategory",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.iteco.fmhandroid.ui"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "newsShouldNotBeCreatedWithoutACategory"
+        },
+        {
+            "name": "suite",
+            "value": "ru.iteco.fmhandroid.ui.NewsTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(614)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
