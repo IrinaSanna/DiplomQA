@@ -1,6 +1,9 @@
-package ru.iteco.fmhandroid.ui;
+package ru.iteco.fmhandroid.ui.data;
 
 public class DataGenerator {
+    private DataGenerator() {
+    }
+
     public static String getLogin() {
         return "login2";
     }

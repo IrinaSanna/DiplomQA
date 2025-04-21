@@ -1,4 +1,4 @@
-package ru.iteco.fmhandroid.ui;
+package ru.iteco.fmhandroid.ui.data;
 
 import android.view.View;
 
@@ -14,6 +14,9 @@ import org.hamcrest.Matcher;
 import java.util.concurrent.TimeoutException;
 
 public class EspressoWaitElement {
+    private EspressoWaitElement() {
+    }
+
     /**
      * Perform action of waiting for a specific view id to be displayed.
      *

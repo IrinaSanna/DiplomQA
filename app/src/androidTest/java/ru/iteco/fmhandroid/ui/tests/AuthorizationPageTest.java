@@ -1,13 +1,11 @@
-package ru.iteco.fmhandroid.ui;
+package ru.iteco.fmhandroid.ui.tests;
 
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.RootMatchers.withDecorView;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static ru.iteco.fmhandroid.ui.EspressoWaitElement.waitDisplayed;
 
 import android.view.View;
 
@@ -23,12 +21,17 @@ import org.junit.runner.RunWith;
 
 import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 import io.qameta.allure.kotlin.Description;
-import ru.iteco.fmhandroid.R;
+import ru.iteco.fmhandroid.ui.AppActivity;
+import ru.iteco.fmhandroid.ui.screenElements.AuthorizationPage;
+import ru.iteco.fmhandroid.ui.screenElements.MainPage;
 
 @LargeTest
 @RunWith(AllureAndroidJUnit4.class)
 
 public class AuthorizationPageTest {
+    AuthorizationPage authorizationPage = new AuthorizationPage();
+    MainPage mainPage = new MainPage();
+
     @Rule
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(AppActivity.class);
@@ -48,21 +51,20 @@ public class AuthorizationPageTest {
     @Test
     @Description("Successful authorization")
     public void validAuthorization() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputLogin();
-        ActivityPage.inputPassword();
-        ActivityPage.clickButtonSingIn();
-        onView(isRoot()).perform(waitDisplayed(R.id.container_list_news_include_on_fragment_main, 5000));
-        ActivityPage.expectedMainNewsPage();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.fillFormAuthorization();
+        authorizationPage.waitContainerListNewsFragmentMain();
+        mainPage.expectedMainNewsPage();
+        mainPage.menuLongOut();
     }
 
     @Test
     @Description("Authorization with invalid login")
     public void shouldBeInvalidLogin() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputInvalidLogin();
-        ActivityPage.inputPassword();
-        ActivityPage.clickButtonSingIn();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.inputInvalidLogin();
+        authorizationPage.inputValidPassword();
+        authorizationPage.clickButtonSingIn();
         onView(withText("Something went wrong. Try again later."))
                 .inRoot(withDecorView(Matchers.not(decorView))).check(matches(isDisplayed()));
     }
@@ -70,10 +72,10 @@ public class AuthorizationPageTest {
     @Test
     @Description("Authorization with empty login")
     public void shouldBeEmptyLogin() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputEmptyLogin();
-        ActivityPage.inputPassword();
-        ActivityPage.clickButtonSingIn();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.inputEmptyLogin();
+        authorizationPage.inputValidPassword();
+        authorizationPage.clickButtonSingIn();
         onView(withText("Login and password cannot be empty"))
                 .inRoot(withDecorView(Matchers.not(decorView))).check(matches(isDisplayed()));
     }
@@ -81,10 +83,10 @@ public class AuthorizationPageTest {
     @Test
     @Description("Authorization with invalid password")
     public void shouldBeNotInvalidPassword() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputLogin();
-        ActivityPage.inputInvalidPassword();
-        ActivityPage.clickButtonSingIn();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.inputValidLogin();
+        authorizationPage.inputInvalidPassword();
+        authorizationPage.clickButtonSingIn();
         onView(withText("Something went wrong. Try again later."))
                 .inRoot(withDecorView(Matchers.not(decorView))).check(matches(isDisplayed()));
     }
@@ -92,10 +94,10 @@ public class AuthorizationPageTest {
     @Test
     @Description("Authorization with empty password")
     public void shouldBeNotEmptyPassword() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputLogin();
-        ActivityPage.inputEmptyPassword();
-        ActivityPage.clickButtonSingIn();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.inputValidLogin();
+        authorizationPage.inputEmptyPassword();
+        authorizationPage.clickButtonSingIn();
         onView(withText("Login and password cannot be empty"))
                 .inRoot(withDecorView(Matchers.not(decorView))).check(matches(isDisplayed()));
     }
@@ -103,10 +105,10 @@ public class AuthorizationPageTest {
     @Test
     @Description("Authorization with empty login and password")
     public void shouldBeNotEmptyLoginAndPassword() {
-        onView(isRoot()).perform(waitDisplayed(R.id.login_text_input_layout, 5000));
-        ActivityPage.inputEmptyLogin();
-        ActivityPage.inputEmptyPassword();
-        ActivityPage.clickButtonSingIn();
+        authorizationPage.waitElementLoginField();
+        authorizationPage.inputEmptyLogin();
+        authorizationPage.inputEmptyPassword();
+        authorizationPage.clickButtonSingIn();
         onView(withText("Login and password cannot be empty"))
                 .inRoot(withDecorView(Matchers.not(decorView))).check(matches(isDisplayed()));
     }
